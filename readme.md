@@ -4,6 +4,7 @@ This project is a full-stack machine learning pipeline designed to predict crop 
 Project Structure
 
 Crop Yeild Prediction/
+<br>
 ├── .venv/                     # Python virtual environment
 ├── data/
 │   ├── raw/                   # Raw input data
@@ -11,11 +12,14 @@ Crop Yeild Prediction/
 │   ├── silver/                # Transformed and feature-engineered data
 │   ├── gold/                  # Final model-ready dataset
 │   └── predictions/          # Saved model predictions
+<br>
 ├── models/
 │   └── linear_regression_crop_yield/  # Trained Spark ML model
+<br>
 ├── logs/
 │   └── logs.txt              # Pipeline and model logs
 ├── artifacts/                # Optional intermediate outputs
+<br>
 ├── src/
 │   ├── extract_bronze.py     # Extract raw → bronze
 │   ├── transform_silver.py   # Bronze → silver transformation
@@ -25,6 +29,7 @@ Crop Yeild Prediction/
 │   ├── visualize.py          # Streamlit UI for real-time prediction
 │   ├── utils.py              # Spark session and helper functions
 │   └── __init__.py
+<br>
 └── README.md                 # Project documentation
 
 Features
