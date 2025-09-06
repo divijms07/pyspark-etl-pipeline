@@ -1,0 +1,37 @@
+-- after training
+(13,[5,9,10,11,12],[1.0,1.0,46.23,25.77,33.33]) | 4.60 
+This means:
+- You have a 13-dimensional feature vector, but only 5 of those dimensions are non-zero (sparse format).
+- The label is the actual crop yield (e.g. 4.60 tons/hectare).
+- RMSE: 1.083 | R²: 0.592
+- RMSE: On average, your predictions are off by ~1.08 units.
+- R² = 0.592: Your model explains ~59.2% of the variance in crop yield.
+ Not bad for a first pass, but there’s room to improve — maybe with feature scaling, regularization, or switching to tree-based models.
+
+(13, [5,9,10,11,12], [1.0,1.0,46.23,25.77,33.33]) | 4.60
+- 13: Total number of features (i.e. the full vector length).
+- [5,9,10,11,12]: Indices where the values are non-zero.
+- [1.0,1.0,46.23,25.77,33.33]: Actual values at those indices.
+- 4.60: The label — in your case, the actual crop yield.
+
+Index Feature Name Value Type
+5   Crop_vec (e.g. Wheat) 1.0 One-hot encoded   
+9   Region_vec (e.g. Punjab) 1.0 One-hot encoded 
+10  Rainfall_cm 46.23 Numeric
+11  Temperature_C 25.77 Numeric
+
+So this row says:
+"Crop is Wheat, Region is Punjab, Rainfall was 46.23 cm, Temperature was 25.77°C, Soil Fertility Index was 33.33 → and the actual crop yield was 4.60 tons/hectare."
+
+
+ Why Sparse Format?
+Spark uses this format to save memory and speed up computation, especially when many features are zero (like in one-hot encoding).
+
+-- Predictions 
+
+feature label predictons 
+- 13, [...], [...]: Ye Spark ka sparse vector format h
+(13,[non zero index],[values at those index] , actual yeild , predicted yeild )
+(13, [5,9,11],[1.0,1.0..],4.60,4.17)
+
+

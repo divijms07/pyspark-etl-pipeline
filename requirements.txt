@@ -1,0 +1,9 @@
+pyspark
+numpy
+pandas
+matplotlib
+seaborn
+fastapi
+streamlit
+requests
+uvicorn
