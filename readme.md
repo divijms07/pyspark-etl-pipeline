@@ -31,7 +31,6 @@ Features
 - Modular ETL pipeline using Spark
 - Feature engineering including nutrient indices, rainfall normalization, and derived metrics
 - Linear Regression model trained using Spark MLlib
-- Streamlit UI for real-time prediction
 - Batch prediction support with saved .parquet outputs
 - Robust logging and directory structure for auditability
 
