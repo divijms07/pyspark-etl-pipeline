@@ -1,0 +1,68 @@
+# ----------------------------
+# Python / Virtual Environment
+# ----------------------------
+__pycache__/
+*.py[cod]
+*.egg
+*.egg-info/
+dist/
+build/
+.venv/
+env/
+venv/
+
+# ----------------------------
+# IDE / Editor Settings
+# ----------------------------
+.vscode/
+.idea/
+*.iml
+
+# ----------------------------
+# Logs & Temp Files
+# ----------------------------
+*.log
+*.out
+*.tmp
+
+# ----------------------------
+# OS-specific Files
+# ----------------------------
+.DS_Store
+Thumbs.db
+
+# ----------------------------
+# Jupyter / Notebook Stuff
+# ----------------------------
+.ipynb_checkpoints/
+*.ipynb~
+
+# ----------------------------
+# Data Files (Big CSV/Parquet)
+# ----------------------------
+# Ignore all raw, bronze, silver, gold layers
+data/raw/
+data/bronze/
+data/silver/
+data/gold/
+
+# In case some CSVs sneak outside `data/`
+*.csv
+*.tsv
+*.parquet
+
+# ----------------------------
+# Plot Outputs
+# ----------------------------
+plots/
+*.png
+*.jpg
+*.jpeg
+
+# ----------------------------
+# Checkpoint / Metadata (Spark / Hadoop)
+# ----------------------------
+.derby/
+.metastore_db/
+.sparkStaging/
+*.crc

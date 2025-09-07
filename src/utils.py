@@ -4,7 +4,7 @@ def get_spark(app_name="CropYeildPipeline"):
     """
     create and return a Spark session
     """
-    python_path = "C:/Users/dimahend/PycharmProjects/Sprint-Project/.venv/Scripts/python.exe"
+    python_path = "C:/Divij/VS Code/pyspark-etl-pipeline/.venv/Scripts/python.exe"
     os.environ["PYSPARK_PYTHON"] = python_path
 
     spark = (
